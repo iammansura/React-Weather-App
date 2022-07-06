@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './SearchEngine.css'
 
-export default function Searchengine() {
+export default function Searchengine(props) {
   //  use Boolean for conditioning
 
   const [weather, setWeather] = useState({ ready: false })
@@ -82,8 +82,8 @@ export default function Searchengine() {
   } else {
     // if we change value thn use let or fixed value thn used const
     const apiKey = '857fbe973ad9987d54d0a62fd2b80055'
-    let city = 'Hannover'
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`
 
     axios.get(apiUrl).then(showTemp)
     return 'Loading....'

@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Searchengine />
+        <Searchengine city="Dhaka" />
 
         <footer className="text-center">
           This projects was codded by{' '}
