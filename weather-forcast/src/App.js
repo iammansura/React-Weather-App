@@ -1,11 +1,13 @@
 import './App.css'
+import Searchengine from './components/SearchEngine'
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather-Forcast</h1>
-        <footer>
+        <Searchengine />
+
+        <footer className="text-center">
           This projects was codded by{' '}
           <a href="https://github.com/iammansura" target="-blank">
             Mansura
