@@ -1,11 +1,14 @@
 import React from 'react'
 import FormateDate from './FormateDate'
 import WeatherIcon from './weatherIcon'
+import WeatherUnits from './weatherUnits'
 
 export default function WeatherInput(props) {
   return (
     <div className="WeatherInput">
-      <h1>{props.Form.city}</h1>
+      <h1>
+        {props.Form.city}, <small className="fs-6">{props.Form.country}</small>
+      </h1>
       <ul>
         <li>
           <FormateDate date={props.Form.date} />
@@ -19,8 +22,7 @@ export default function WeatherInput(props) {
           <span className="p-2 m-0 pt-5 ">
             <WeatherIcon iconCode={props.Form.icon} />
           </span>
-          <span className="today-temp mb-4">{Math.round(props.Form.Temp)}</span>
-          <span className="units">°C</span>
+          <WeatherUnits celsius={props.Form.Temp} />
         </div>
         <div className="col-6">
           <ul>
