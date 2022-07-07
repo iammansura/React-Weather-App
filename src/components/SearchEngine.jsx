@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import FormateDate from './FormateDate'
 import './SearchEngine.css'
 
 export default function Searchengine(props) {
@@ -12,7 +13,7 @@ export default function Searchengine(props) {
     console.log(response.data)
     setWeather({
       ready: true,
-      date: 'Wednesday 05:52',
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       Temp: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -51,7 +52,9 @@ export default function Searchengine(props) {
         </form>
         <h1>{weather.city}</h1>
         <ul>
-          <li>Wednesday 05:52</li>
+          <li>
+            <FormateDate date={weather.date} />
+          </li>
           <li className="text-capitalize">{weather.description}</li>
           <li>Feels-like : {Math.round(weather.feels)}°C</li>
         </ul>
