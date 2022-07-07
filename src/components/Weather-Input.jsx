@@ -1,5 +1,6 @@
 import React from 'react'
 import FormateDate from './FormateDate'
+import WeatherIcon from './weatherIcon'
 
 export default function WeatherInput(props) {
   return (
@@ -10,17 +11,15 @@ export default function WeatherInput(props) {
           <FormateDate date={props.Form.date} />
         </li>
         <li className="text-capitalize">{props.Form.description}</li>
-        <li>Feels-like : {Math.round(props.Form.feels)}°C</li>
+        <li className="mb-2">Feels-like : {Math.round(props.Form.feels)}°C</li>
       </ul>
       <div className="row">
         <div className="col-6">
-          <img
-            src={props.Form.icon}
-            alt={props.Form.description}
-            className="mb-4 "
-          />
-
-          <span className="today-temp">{Math.round(props.Form.Temp)}</span>
+          {/* here start Icons */}
+          <span className="p-2 m-0 pt-5 ">
+            <WeatherIcon iconCode={props.Form.icon} />
+          </span>
+          <span className="today-temp mb-4">{Math.round(props.Form.Temp)}</span>
           <span className="units">°C</span>
         </div>
         <div className="col-6">

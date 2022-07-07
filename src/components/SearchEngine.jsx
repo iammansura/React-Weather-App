@@ -24,7 +24,7 @@ export default function Searchengine(props) {
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       country: response.data.sys.country,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     })
   }
 
