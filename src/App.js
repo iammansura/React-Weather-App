@@ -13,7 +13,7 @@ function App() {
           />
 
           <footer className="text-center">
-            This projects was codded by{' '}
+            This projects was coded by{' '}
             <a href="https://github.com/iammansura" target="-blank">
               Mansura
             </a>{' '}
@@ -22,7 +22,15 @@ function App() {
               href="https://github.com/iammansura/weather-forcast"
               target="-blank"
             >
-              open-source on GitHub
+              open-sourced on GitHub
+            </a>{' '}
+            and <br />
+            <a
+              href="https://react-weather-forcastapp.netlify.app"
+              target="-blank "
+            >
+              {' '}
+              hosted on Netlify
             </a>
           </footer>
         </div>
