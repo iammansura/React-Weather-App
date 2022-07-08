@@ -19,9 +19,9 @@ export default function WeatherInput(props) {
       <div className="row">
         <div className="col-6">
           {/* here start Icons */}
-          <span className="p-2 m-0 pt-5 ">
-            <WeatherIcon iconCode={props.Form.icon} />
-          </span>
+
+          <WeatherIcon iconCode={props.Form.icon} size={50} />
+
           <WeatherUnits celsius={props.Form.Temp} />
         </div>
         <div className="col-6">

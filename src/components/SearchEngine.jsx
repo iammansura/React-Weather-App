@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import WeatherInput from './Weather-Input'
+import DailyForcast from './DailyForcast'
 import './SearchEngine.css'
 
 export default function Searchengine(props) {
@@ -72,6 +73,8 @@ export default function Searchengine(props) {
         </form>
         {/* this funtion go to the search input  */}
         <WeatherInput Form={weather} />
+
+        <DailyForcast />
       </div>
     )
   } else {
