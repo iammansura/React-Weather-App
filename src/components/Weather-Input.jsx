@@ -12,27 +12,32 @@ export default function WeatherInput(props) {
       <div className="row">
         <div className="col-6">
           <ul>
-            <li>
+            <li className="fs-4 text-muted">
               <FormateDate date={props.Form.date} />
             </li>
-            <li className="text-capitalize">{props.Form.description}</li>
+            <li className="text-capitalize mb-3 description">
+              {props.Form.description}
+            </li>
           </ul>
         </div>
         <div className="col-6">
           <ul>
-            <li className="">Feels-like : {Math.round(props.Form.feels)}°C</li>
+            <li className="feel">
+              Feels-like : {Math.round(props.Form.feels)}
+              <span className="unitss fs-6 p-0 ">°C</span>
+            </li>
           </ul>
         </div>
       </div>
       <div className="row">
-        <div className="col-6 mt-0">
+        <div className="col-6 mt-0 ">
           {/* here start Icons */}
 
           <WeatherIcon iconCode={props.Form.icon} size={50} />
           <WeatherUnits celsius={props.Form.Temp} />
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="showforecast">
             <li>Humidity : {props.Form.humidity}%</li>
             <li> Wind : {Math.round(props.Form.wind)} km/h</li>
             <li>Pressure : {props.Form.pressure}</li>
