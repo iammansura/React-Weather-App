@@ -14,10 +14,33 @@ export default function DailyForcast(props) {
   if (loaded) {
     return (
       <div className="Forcast">
-        <div className="row">
-          <div className="col">
-            <DayForcast data={forecast[0]} />
+        <div className="row mt-4 mb-4">
+          {forecast.map(function (dailyforcast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <DayForcast data={dailyforcast} />
+                </div>
+              )
+            }
+          })}
+
+          {/* this is also a soluation but i used loop for days
+           <div className="col">
+            <DayForcast data={forecast[2]} />
           </div>
+          <div className="col">
+            <DayForcast data={forecast[3]} />
+          </div>
+          <div className="col">
+            <DayForcast data={forecast[4]} />
+          </div>
+          <div className="col">
+            <DayForcast data={forecast[5]} />
+          </div>
+          <div className="col">
+            <DayForcast data={forecast[6]} />
+          </div> */}
         </div>
       </div>
     )
