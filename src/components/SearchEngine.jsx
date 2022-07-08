@@ -14,7 +14,9 @@ export default function Searchengine(props) {
     console.log(response.data)
     setWeather({
       ready: true,
+
       date: new Date(response.data.dt * 1000),
+      coord: response.data.coord,
       city: response.data.name,
       Temp: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -74,7 +76,7 @@ export default function Searchengine(props) {
         {/* this funtion go to the search input  */}
         <WeatherInput Form={weather} />
 
-        <DailyForcast />
+        <DailyForcast coords={weather.coord} />
       </div>
     )
   } else {
