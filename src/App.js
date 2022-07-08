@@ -13,35 +13,29 @@ function App() {
           />
 
           <footer className="text-center">
+            Open-sourced on{' '}
             <a
               href="https://github.com/iammansura/weather-forcast"
               target="-blank"
             >
-              Open-sourced on GitHub
+              GitHub
             </a>{' '}
-            and <br />
+            and hosted on{' '}
             <a
               href="https://react-weather-forcastapp.netlify.app"
               target="-blank "
             >
               {' '}
-              hosted on Netlify
+              Netlify
             </a>{' '}
-            by
+            coded by{' '}
             <a
               href="https://www.linkedin.com/in/mansura-akter2022/"
               target="-blank"
+              title="linkedin"
             >
               Mansura Akter
             </a>{' '}
-            and is and <br />
-            <a
-              href="https://react-weather-forcastapp.netlify.app"
-              target="-blank "
-            >
-              {' '}
-              hosted on Netlify
-            </a>
           </footer>
         </div>
       </div>

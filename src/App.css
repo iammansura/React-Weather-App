@@ -5,4 +5,16 @@
 .App footer {
   font-size: 14px;
   margin-top: 15px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.App footer a {
+  color: rgb(71, 24, 171);
+  letter-spacing: 2px;
+  line-height: 2;
+  text-transform: capitalize;
+}
+.App footer a:hover {
+  color: blue;
+  text-decoration: none;
 }
