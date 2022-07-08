@@ -21,12 +21,6 @@ export default function WeatherInput(props) {
         <div className="col-6">
           <ul>
             <li className="">Feels-like : {Math.round(props.Form.feels)}°C</li>
-            <li className="mb-4">
-              <strong>
-                <span>{Math.round(props.Form.maxtemp)}°</span>/
-                <span>{Math.round(props.Form.mintemp)}°</span>C
-              </strong>
-            </li>
           </ul>
         </div>
       </div>
