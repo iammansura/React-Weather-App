@@ -4,6 +4,7 @@
 
   border-radius: 6px;
   background: rgb(250, 244, 236);
+  box-shadow: 5px 10px 5px 10px solid #000;
 }
 
 .Searchengine h1 {
